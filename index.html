@@ -12,68 +12,144 @@
 <body>
   <div class="navbar">
     <img src="./logo.png" alt="logo" class="logo" />
-    <img src="./menu.png" alt="menu" class="menu" />
+    <div id="x-menu" onclick="clickHandler()">
+      <svg class="outer-dots" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" enable-background="new 0 0 31 31" version="1.1" viewBox="0 0 31 31" xml:space="preserve">
+        <defs>
+          <circle id="SVG_circle_1" cx="8.5" cy="8.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_3" cx="22.5" cy="8.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_5" cx="15.5" cy="15.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_7" cx="8.5" cy="22.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_9" cx="22.5" cy="22.5" r="2.5" fill="none" />
+        </defs>
+        <clipPath id="SVG_mask_circle_1">
+          <use overflow="visible" xlink:href="#SVG_circle_1" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_3">
+          <use overflow="visible" xlink:href="#SVG_circle_3" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_5">
+          <use overflow="visible" xlink:href="#SVG_circle_5" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_7">
+          <use overflow="visible" xlink:href="#SVG_circle_7" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_9">
+          <use overflow="visible" xlink:href="#SVG_circle_9" />
+        </clipPath>
+        <linearGradient id="SVG_gradient_red_violet" x1="24" x2="7" y1="7" y2="24" gradientUnits="userSpaceOnUse">
+          <stop offset="0" style="stop-color:#7D5FC3" />
+          <stop offset="1" style="stop-color:#D3496D" />
+        </linearGradient>
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_1)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_3)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_5)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_7)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_9)" />
+      </svg>
+      <svg class="inner-dots" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" enable-background="new 0 0 31 31" version="1.1" viewBox="0 0 31 31" xml:space="preserve">
+        <defs>
+          <circle id="SVG_circle_2" cx="15.5" cy="8.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_4" cx="8.5" cy="15.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_6" cx="22.5" cy="15.5" r="2.5" fill="none" />
+          <circle id="SVG_circle_8" cx="15.5" cy="22.5" r="2.5" fill="none" />
+        </defs>
+        <clipPath id="SVG_mask_circle_2">
+          <use overflow="visible" xlink:href="#SVG_circle_2" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_4">
+          <use overflow="visible" xlink:href="#SVG_circle_4" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_6">
+          <use overflow="visible" xlink:href="#SVG_circle_6" />
+        </clipPath>
+        <clipPath id="SVG_mask_circle_8">
+          <use overflow="visible" xlink:href="#SVG_circle_8" />
+        </clipPath>
+        <linearGradient id="SVG_gradient_red_violet" x1="24" x2="7" y1="7" y2="24" gradientUnits="userSpaceOnUse">
+          <stop offset="0" style="stop-color:#7D5FC3" />
+          <stop offset="1" style="stop-color:#D3496D" />
+        </linearGradient>
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_2)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_4)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_6)" />
+        <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_8)" />
+      </svg>
+    </div>
   </div>
   <div class="container-fluid">
     <p class="header">Welcome to our blog, here we share our stories with you.</p>
     <div class="story-container">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-6 story">
-          <img src="images/1.png" alt="Story thumbnail" class="story-thumbnail" />
+          <div class="story-thumbnail_wrapper">
+            <img src="images/1.png" alt="Story thumbnail" class="story-thumbnail" />
+          </div>
           <div class="story-body">
-            <div class="story-title_wrapper">
-              <p class="story-title">Bojan Stefanovic Logoholik</p>
-            </div>
+            <div class="story-title_wrapper"></div>
+            <p class="story-separator"></p>
+            <p class="story-title">Bojan Stefanovic Logoholik</p>
             <p class="story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 story">
-          <img src="images/2.png" alt="Story thumbnail" class="story-thumbnail" />
+          <div class="story-thumbnail_wrapper">
+            <img src="images/2.png" alt="Story thumbnail" class="story-thumbnail" />
+          </div>
           <div class="story-body">
-            <div class="story-title_wrapper">
-              <p class="story-title">Double interview</p>
-            </div>
+            <div class="story-title_wrapper"></div>
+            <p class="story-separator"></p>
+            <p class="story-title">Double interview</p>
             <p class="story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 story">
-          <img src="images/3 i 4.png" alt="Story thumbnail" class="story-thumbnail" />
+          <div class="story-thumbnail_wrapper">
+            <img src="images/3.png" alt="Story thumbnail" class="story-thumbnail" />
+          </div>
           <div class="story-body">
-            <div class="story-title_wrapper">
-              <p class="story-title">The Barbers</p>
-            </div>
+            <div class="story-title_wrapper"></div>
+            <p class="story-separator"></p>
+            <p class="story-title">How we achieved a high level of employee satisfaction</p>
             <p class="story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 story">
-          <img src="images/3 i 4.png" alt="Story thumbnail" class="story-thumbnail" />
+          <div class="story-thumbnail_wrapper">
+            <img src="images/4.png" alt="Story thumbnail" class="story-thumbnail" />
+          </div>
           <div class="story-body">
-            <div class="story-title_wrapper">
-              <p class="story-title">The Barbers</p>
-            </div>
+            <div class="story-title_wrapper"></div>
+            <p class="story-separator"></p>
+            <p class="story-title">The Barbers</p>
             <p class="story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 story">
-          <img src="images/5.png" alt="Story thumbnail" class="story-thumbnail" />
+          <div class="story-thumbnail_wrapper">
+            <img src="images/5.png" alt="Story thumbnail" class="story-thumbnail" />
+          </div>
           <div class="story-body">
-            <div class="story-title_wrapper">
-              <p class="story-title">How to Find an Agency That Builds Satisfaction</p>
-            </div>
+            <div class="story-title_wrapper"></div>
+            <p class="story-separator"></p>
+            <p class="story-title">How to Find an Agency That Builds Satisfaction</p>
             <p class="story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 story">
-          <img src="images/6.png" alt="Story thumbnail" class="story-thumbnail" />
+          <div class="story-thumbnail_wrapper">
+            <img src="images/6.png" alt="Story thumbnail" class="story-thumbnail" />
+          </div>
           <div class="story-body">
-            <div class="story-title_wrapper">
-              <p class="story-title">Discovery phase</p>
-            </div>
+            <div class="story-title_wrapper"></div>
+            <p class="story-separator"></p>
+            <p class="story-title">Discovery phase</p>
             <p class="story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </div>
