@@ -18,7 +18,7 @@
 }
 
 .header {
-  font-size: 26px;
+  font-size: 1.6em;
   line-height: 39px;
   font-family: "GothamBold", Helvetica, sans-serif;
   width: 80%;
@@ -28,31 +28,200 @@
   margin-bottom: 10px;
 }
 
-.story-thumbnail {
-  width: 100%;
+.story-thumbnail_wrapper {
+  overflow: hidden;
 }
 
-.story-title_wrapper {
-  border-left: 2px solid purple;
-  margin: 5px 0;
+.story:hover img {
+  transform: scale(1.2);
+}
+
+.story:hover .story-separator {
+  margin-top: 18px;
+}
+
+.story-thumbnail {
+  width: 100%;
+  transition: transform .5s ease;
+}
+
+.story-separator {
+  border-left: 3px solid #AB4D8E;
+  margin-top: 5px;
+  height: 25px;
+  position: absolute;
 }
 
 .story-title {
   font-family: "GothamMedium", Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 1.10em;
   line-height: 26px;
   margin-left: 7px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
+  padding-top: 5px;
 }
 
 .story-content {
   padding: 0 7px;
   font-family: "GothamLight", Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 1em;
   line-height: 21px;
 }
 
-/* Fonts */
+/* Menu */
+
+#x-menu {
+      position: relative;
+      width: 21px;
+      height: 21px;
+      overflow: visible;
+      cursor: pointer;
+    }
+
+    #x-menu svg {
+      position: absolute;
+      top: -5;
+      left: -5;
+      width: 31px;
+      height: 31px;
+      transform-origin: 50% 50%;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #x-menu:hover svg {
+      transform: scale(1.21);
+    }
+
+    #x-menu.active > .outer-dots {
+      transform: rotate(90deg);
+    }
+
+    #x-menu.active > .inner-dots {
+      transform: scale(0.707) rotate(45deg);
+    }
+
+    #x-menu.active:hover > .outer-dots {
+      transform: scale(1.21) rotate(90deg);
+    }
+
+    #x-menu.active:hover > .inner-dots {
+      transform: scale(0.855) rotate(45deg); /*   0.7 * 1.21 = 0.855   */
+    }
+
+
+/* Media Queries */
+
+
+@media (min-width: 768px) {
+
+  .navbar {
+    padding: 25px !important;
+  }
+
+  .container-fluid {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .story {
+    margin-bottom: 25px;
+  }
+
+  .header {
+    width: 80%;
+    font-size: 2.55em;
+    line-height: 67px;
+    margin-bottom: 35px;
+  }
+
+  .story-separator {
+    margin-top: 10px;
+    height: 32px;
+  }
+
+  .story-title {
+    font-size: 1.45em;
+    line-height: 30px;
+    padding-top: 14px;
+  }
+
+  .story-content {
+    font-size: 0.875em;
+    line-height: 23px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .x-menu {
+    width: 26px;
+  }
+
+  
+}
+
+@media (min-width: 992px) {
+  .header {
+    width: 70%;
+ }
+
+}
+
+@media (min-width: 1600px) { 
+  .container-fluid {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    width: 85% !important;
+  }
+
+  .navbar {
+    margin-bottom: 100px;
+    padding: 30px !important;
+    
+    /* margin: auto; */
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .x-menu {
+    width: 26px;
+  }
+
+  .logo, .x-menu {
+    cursor: pointer;
+  }
+  
+  .header {
+    font-size: 5.50em;
+    line-height: 95px;
+    letter-spacing: 0.3px;
+    margin-bottom: 70px;
+  }
+
+  .story-title {
+    font-size: 2.25em;
+    line-height: 36px;
+    margin-left: 20px;
+    padding-top: 27px;
+    margin-bottom: 20px;
+  }
+
+  .story-content {
+    font-size: 1.25em;
+    margin-left: 15px;
+  }
+
+  .story-separator {
+    height: 55px;
+    margin-top: 16px;
+  }
+
+ }
+
+ /* Fonts */
 
 @font-face {
   font-family: 'GothamLight';
@@ -83,92 +252,3 @@
        url('../fonts/GothamBold/GothamBold.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('../fonts/GothamBold/GothamBold.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
-
-/* Media Queries */
-
-
-@media (min-width: 768px) {
-
-  .navbar {
-    padding: 25px !important;
-  }
-
-  .container-fluid {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-
-  .story {
-    margin-bottom: 25px;
-  }
-
-  .header {
-    width: 80%;
-    font-size: 42px;
-    line-height: 67px;
-    margin-bottom: 35px;
-  }
-
-  .story-title {
-    font-size: 23px;
-    line-height: 30px;
-  }
-
-  .story-content {
-    font-size: 14px;
-    line-height: 23px;
-  }
-
-  .logo {
-    width: 60px;
-  }
-
-  .menu {
-    width: 26px;
-  }
-
-  
-}
-
-@media (min-width: 1200px) { 
-  .container-fluid {
-    padding-left: 60px !important;
-    padding-right: 60px !important;
-    width: 1138px !important;
-  }
-
-  .navbar {
-    margin-bottom: 100px;
-    padding: 30px !important;
-    margin: auto;
-  }
-
-  .logo {
-    width: 60px;
-  }
-
-  .menu {
-    width: 26px;
-  }
-
-  .logo, .menu {
-    cursor: pointer;
-  }
-  
-  .header {
-    font-size: 90px;
-    line-height: 95px;
-    letter-spacing: 0.3px;
-    margin-bottom: 70px;
-  }
-
-  .story-title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  .story-title_wrapper {
-    border-left: 3px solid purple;
-  }
-
- }
