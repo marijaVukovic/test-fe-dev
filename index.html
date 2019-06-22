@@ -5,14 +5,14 @@
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Kroon Studio</title>
-  <link rel='stylesheet' type='text/css' media='screen' href='./styles/main.css'>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href='./styles/main.css'>
 </head>
 
 <body>
   <div class="navbar">
     <img src="./logo.png" alt="logo" class="logo" />
-    <div id="x-menu" onclick="clickHandler()">
+    <div id="x-menu" class="dropdown">
       <svg class="outer-dots" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
         y="0px" enable-background="new 0 0 31 31" version="1.1" viewBox="0 0 31 31" xml:space="preserve">
         <defs>
@@ -76,6 +76,9 @@
         <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_6)" />
         <rect width="31" height="31" fill="url(#SVG_gradient_red_violet)" clip-path="url(#SVG_mask_circle_8)" />
       </svg>
+    </div>
+    <div id="dp">
+      <a class="dp-item" href="./map.html">Map</a>
     </div>
   </div>
   <div class="container-fluid">

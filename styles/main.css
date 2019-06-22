@@ -13,8 +13,32 @@
   margin-top: 10px;
 }
 
+#dp {
+  position: absolute;
+  width: 75px;
+  height: 30px;
+  vertical-align: middle;
+  right: 18px;
+  top: 57px;
+  display: none;
+  text-align: end;
+  background-image: linear-gradient(45deg, #7D5FC3, #D3496D)
+}
+
+.dp-item {
+  color: #fff;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.dp-item:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
 .logo {
   width: 45px;
+  cursor: pointer;
 }
 
 .header {
@@ -26,6 +50,7 @@
 
 .story {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .story-thumbnail_wrapper {
@@ -71,43 +96,46 @@
 /* Menu */
 
 #x-menu {
-      position: relative;
-      width: 21px;
-      height: 21px;
-      overflow: visible;
-      cursor: pointer;
-    }
+  position: relative;
+  width: 21px;
+  height: 21px;
+  overflow: visible;
+  cursor: pointer;
+}
 
-    #x-menu svg {
-      position: absolute;
-      top: -5;
-      left: -5;
-      width: 31px;
-      height: 31px;
-      transform-origin: 50% 50%;
-      transition: transform 0.2s ease-in-out;
-    }
+#x-menu svg {
+  position: absolute;
+  top: -5;
+  left: -5;
+  width: 31px;
+  height: 31px;
+  transform-origin: 50% 50%;
+  transition: transform 0.2s ease-in-out;
+}
 
-    #x-menu:hover svg {
-      transform: scale(1.21);
-    }
+#x-menu:hover svg {
+  transform: scale(1.21);
+}
 
-    #x-menu.active > .outer-dots {
-      transform: rotate(90deg);
-    }
+#x-menu.active > .outer-dots {
+  transform: rotate(90deg);
+}
 
-    #x-menu.active > .inner-dots {
-      transform: scale(0.707) rotate(45deg);
-    }
+#x-menu.active > .inner-dots {
+  transform: scale(0.707) rotate(45deg);
+}
 
-    #x-menu.active:hover > .outer-dots {
-      transform: scale(1.21) rotate(90deg);
-    }
+#x-menu.active:hover > .outer-dots {
+  transform: scale(1.21) rotate(90deg);
+}
 
-    #x-menu.active:hover > .inner-dots {
-      transform: scale(0.855) rotate(45deg); /*   0.7 * 1.21 = 0.855   */
-    }
+#x-menu.active:hover > .inner-dots {
+  transform: scale(0.855) rotate(45deg);
+}
 
+#dp.active {
+  display: block;
+}
 
 /* Media Queries */
 
@@ -157,11 +185,13 @@
   .x-menu {
     width: 26px;
   }
-
-  
 }
 
 @media (min-width: 992px) {
+  .container-fluid {
+    width: 90% !important;
+  }
+
   .header {
     width: 70%;
  }
@@ -190,10 +220,6 @@
     width: 26px;
   }
 
-  .logo, .x-menu {
-    cursor: pointer;
-  }
-  
   .header {
     font-size: 5.50em;
     line-height: 95px;
@@ -218,7 +244,6 @@
     height: 55px;
     margin-top: 16px;
   }
-
  }
 
  /* Fonts */
