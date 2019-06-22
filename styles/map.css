@@ -5,11 +5,12 @@ body {
 
 .navbar {
   position: absolute;
-  padding: 25px !important
+  padding: 15px !important;
+  margin-top: 8px;
 }
 
 .logo {
-  margin-top: 10px;
+  width: 45px;
 }
 
 .map {
@@ -25,9 +26,13 @@ body {
 .location-pin {
   height: 26px;
   position: absolute;
+  bottom: -10px;
+  left: -3px;
 }
 
 .popover {
+  left: -48px;
+  top: 13px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -35,10 +40,19 @@ body {
   width: 113px;
   height: 66px;
   border-radius: 4px;
-  opacity: 0.9;
   background-color: #232323;
   justify-content: center;
-  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 50% 0;
+  transition: transform .2s ease-in;
+}
+
+.pin {
+  position: relative;
+  width: 0;
+  height: 0;
+  overflow: visible;
 }
 
 .city-name {
@@ -56,98 +70,36 @@ body {
   margin: -5px;
 }
 
-#new-york {
-  top: 392px;
-  left: 381px;
-}
-
-#new-york:hover, #new-york.active {
-  transform: scale(1.50);
-  top: 385px;
-}
-
-#new-york_popover {
-  top: 422px;
-  left: 335px;
-}
-
-#new-york_popover.active {
- visibility: visible;
-}
-
-#london {
-  top: 353px;
-  left: 575px;
-}
-
-#london:hover, #london.active {
-  transform: scale(1.50);
-  top: 346px;
-}
-
-#london_popover {
-  left: 528px;
-  top: 384px;
-}
-
-#london_popover.active {
- visibility: visible;
-}
-
-#belgrade {
-  top: 382px;
-  left: 638px;
-}
-
-#belgrade:hover, #belgrade.active {
-  transform: scale(1.50);
-  top: 375px;
-}
-
-#belgrade_popover {
-  top: 412px;
-  left: 593px;
-}
-
-#belgrade_popover.active {
- visibility: visible;
-}
-
-#tokyo {
-  top: 402px;
-  right: 315px;
-}
-
-#tokyo:hover, #tokyo.active {
-  transform: scale(1.50);
-  top: 395px;
-}
-
-#tokyo_popover {
-  top: 430px;
-  left: 930px;
-}
-
-#tokyo_popover.active {
- visibility: visible;
-}
-
-
-#sydney {
-  top: 620px;
-  right: 280px;
-}
-
+#new-york:hover, #new-york.active,
+#london:hover, #london.active,
+#belgrade:hover, #belgrade.active,
+#tokyo:hover, #tokyo.active,
 #sydney:hover, #sydney.active {
-  transform: scale(1.50);
-  top: 613px;
+  transform: scale(1.50) translateY(-4px);
 }
 
-#sydney_popover {
-  top: 648px;
-  left: 965px;
-}
-
+#new-york_popover.active,
+#london_popover.active,
+#belgrade_popover.active,
+#tokyo_popover.active,
 #sydney_popover.active {
- visibility: visible;
+  visibility: visible;
+  opacity: 0.9;
+  transform: scale(1);
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+@media (min-width: 768px) {
+
+  .logo {
+    width: 60px;
+  }
+
+  .navbar {
+    padding: 25px !important;
+    margin-top: 10px;
+  }
 }
