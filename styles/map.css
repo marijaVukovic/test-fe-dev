@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: absolute;
+  padding: 25px !important
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.map {
+  height: 1024px;
+  width: 1024px;
+  background-image: url("../images/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.location-pin {
+  height: 26px;
+  position: absolute;
+}
+
+.popover {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 113px;
+  height: 66px;
+  border-radius: 4px;
+  opacity: 0.9;
+  background-color: #232323;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.city-name {
+  display: flex;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #F8F8F8;
+}
+
+.city-time {
+  color: #B3FBEE;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  display: flex;
+  margin: -5px;
+}
+
+#new-york {
+  top: 392px;
+  left: 381px;
+}
+
+#new-york:hover, #new-york.active {
+  transform: scale(1.50);
+  top: 385px;
+}
+
+#new-york_popover {
+  top: 422px;
+  left: 335px;
+}
+
+#new-york_popover.active {
+ visibility: visible;
+}
+
+#london {
+  top: 353px;
+  left: 575px;
+}
+
+#london:hover, #london.active {
+  transform: scale(1.50);
+  top: 346px;
+}
+
+#london_popover {
+  left: 528px;
+  top: 384px;
+}
+
+#london_popover.active {
+ visibility: visible;
+}
+
+#belgrade {
+  top: 382px;
+  left: 638px;
+}
+
+#belgrade:hover, #belgrade.active {
+  transform: scale(1.50);
+  top: 375px;
+}
+
+#belgrade_popover {
+  top: 412px;
+  left: 593px;
+}
+
+#belgrade_popover.active {
+ visibility: visible;
+}
+
+#tokyo {
+  top: 402px;
+  right: 315px;
+}
+
+#tokyo:hover, #tokyo.active {
+  transform: scale(1.50);
+  top: 395px;
+}
+
+#tokyo_popover {
+  top: 430px;
+  left: 930px;
+}
+
+#tokyo_popover.active {
+ visibility: visible;
+}
+
+
+#sydney {
+  top: 620px;
+  right: 280px;
+}
+
+#sydney:hover, #sydney.active {
+  transform: scale(1.50);
+  top: 613px;
+}
+
+#sydney_popover {
+  top: 648px;
+  left: 965px;
+}
+
+#sydney_popover.active {
+ visibility: visible;
+}
